@@ -1,18 +1,21 @@
 //design the home ui in js
 export default class home{
   constructor() {
-	const LeftContainer = document.createElement("div");
-	LeftContainer.setAttribute("class","mainLeftContainer");
 
-	const RightContainer = document.createElement("div");
-	RightContainer.setAttribute("class","mainRightContainer");
+	const bodyContainer = document.createElement("div");
+	bodyContainer.setAttribute("class","bodyContainer");
 
-	// Select the <main> element
-const mainElement = document.getElementById("main");
+	const mainRightContainer = document.getElementsByClassName("mainRightContainer");
 
-// Append both containers at once
-mainElement.append(LeftContainer, RightContainer);
+	 // Check if there are any elements with the class name "mainRightContainer"
+	 if (mainRightContainer.length > 0) {
+		// Append the bodyContainer to the first element in the collection
+		mainRightContainer[0].append(bodyContainer);
+	  } else {
+		// Log an error if no elements with the class name "mainRightContainer" are found
+		console.error("No elements with class 'mainRightContainer' found.");
+	  }
 
-RightContainer.append(document.querySelector("header"),document.querySelector("footer"))
+
   }
 }

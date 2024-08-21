@@ -11,6 +11,25 @@ body {
     
 }
 
+header{
+  margin-top: 8vh;
+}
+
+footer{
+  bottom: 0;
+  position:absolute;
+  margin-top: auto;
+  margin-bottom: 2vh;
+}
+ul {
+  display: flex;
+  flex-direction: row; /* Change to row for horizontal layout */
+}
+
+li {
+  list-style: none;
+  margin: 10px;
+}
 .container {
     max-width: 1200px;
     margin: 0 auto;
