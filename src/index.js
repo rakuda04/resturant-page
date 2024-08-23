@@ -13,9 +13,11 @@ const LeftContainer = document.createElement("div");
 const mainElement = document.getElementById("main");
 
 // Append both containers at once
-mainElement.append(LeftContainer, RightContainer);
+mainElement.append(LeftContainer, RightContainer, document.querySelector("header"));
 
-RightContainer.append(document.querySelector("header"),document.querySelector("footer"))
+RightContainer.append(document.querySelector("footer"))
+
+
 
 //add js to elements the heading ul so that it has style
 
