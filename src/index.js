@@ -1,5 +1,6 @@
 
 import home from './home.js'
+// import loadPage from './page-load.js';
 
 
 
@@ -21,4 +22,4 @@ RightContainer.append(document.querySelector("footer"))
 
 //add js to elements the heading ul so that it has style
 
-const myHome = new home();
+// const myHome = new home();
