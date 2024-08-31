@@ -2,9 +2,9 @@
 export default class home{
   constructor() {
 
-	const bodyContainer = document.createElement("div");
-	bodyContainer.setAttribute("class","bodyContainer");
-	bodyContainer.classList.add("bodyContainer", "homeBodyContainer");
+	//adds class of homebody to bodycontainer
+	const bodyContainer = document.getElementsByClassName("bodyContainer")[0]
+	bodyContainer.classList.add("homeBodyContainer");
 
 	const mainRightContainer = document.getElementsByClassName("mainRightContainer");
 

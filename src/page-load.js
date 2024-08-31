@@ -1,26 +1,28 @@
 
 
-import home from "./home";
-import menu from "./menu";
-import about from "./about";
+import home from "./home.js";
+// import menu from "./menu";
+// import about from "./about";
 
 export default class loadPage{
 constructor(){}
-mainUI = new home()
-/* 
+
+mainUI = new home();
+
+
 deinitialize() {
-    
-    // check if this.bodyContainer exsists and if its connected to a parent node
-if (this.mainUI && this.mainUI.parentNode == bodycontainer) {
-    //removes child from parent node
-    this.mainUI.parentNode.removeChild(this.mainUI);
+    console.log("Deinitializing...");
+    console.log(this.mainUI);
+    if (this.mainUI && this.mainUI.parentNode) {
+        console.log("Removing mainUI from its parent node.");
+        this.mainUI.parentNode.removeChild(this.mainUI);
+        console.log("mainUI removed.");
+    } else {
+        console.log("mainUI or its parent node is not available.");
+    }
 }
-// check if the parent node is mainright container if it is 
 
-
-}
-
- mainUI = new home();
+// deinitialize();
 
 loadPage(event){
     const buttonPressed = event.target.id
@@ -28,7 +30,7 @@ loadPage(event){
     //check if dom loaded and then load home page
 
 
-    mainUI.deinitialize()
+    this.deinitialize()
 
     switch(buttonPressed){
         case 'homeNav':
@@ -45,7 +47,7 @@ loadPage(event){
     }
 
 }
-*/
+
 
 
 }
