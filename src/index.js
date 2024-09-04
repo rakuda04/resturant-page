@@ -1,7 +1,7 @@
 
 
 import home from "./home.js";
-// import menu from "./menu.js";
+import {menu_page} from "./menu.js";
 // import about from "./about.js";
 
 
@@ -36,7 +36,7 @@ const clearpage = () => {
 	}
 }
 
-//TODO: look into solutions to fix home class
+//TODO: Object object
 const navButtons = document.querySelectorAll(".nav-item");
 navButtons.forEach(element => {
 	element.addEventListener('click',() =>{
@@ -45,17 +45,16 @@ navButtons.forEach(element => {
 			clearpage();
 			switch (page.id) {
 			  case 'homeNav':
-				bodyContainer.append(home);
-				console.log("works");
+				bodyContainer.append(new home);
+				
 				break;
 			  case 'aboutNav':
 				bodyContainer.append(about);
 				break;
 			  case 'menuNav':
-				bodyContainer.append(menu);
+				bodyContainer.append(menu_page);
 				break;
 			  default:
-				console.log("Something's wrong");
 				console.log(page.id);
 				break;
 			}
